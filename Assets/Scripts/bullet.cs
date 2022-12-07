@@ -19,7 +19,7 @@ public class bullet : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //destroy bullet when hits the wall
-        if (collision.gameObject.CompareTag("Wall"))
+        if (collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("rock"))
         {
             Destroy(gameObject);
         }

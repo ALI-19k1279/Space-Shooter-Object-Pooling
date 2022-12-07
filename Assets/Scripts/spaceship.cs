@@ -40,4 +40,12 @@ public class spaceship : MonoBehaviour
         //move
         rb.velocity = new Vector2(0, vertical * speed);
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        //destroy bullet when hits the wall
+        if (collision.gameObject.CompareTag("rock"))
+        {
+            Destroy(gameObject);
+        }
+    }
 }

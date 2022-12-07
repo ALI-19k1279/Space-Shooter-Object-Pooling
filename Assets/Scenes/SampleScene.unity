@@ -318,6 +318,51 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &572539655
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 572539657}
+  - component: {fileID: 572539656}
+  m_Layer: 0
+  m_Name: spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &572539656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572539655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee5d5dab5acaed6488c03cd2f4fb6c1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rockPrefab: {fileID: 4229492135953022815, guid: 61c8c0a44dc7a4f4186246e748aac0ce, type: 3}
+--- !u!4 &572539657
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572539655}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &664369835
 GameObject:
   m_ObjectHideFlags: 0
@@ -477,7 +522,7 @@ GameObject:
   - component: {fileID: 1588450726}
   m_Layer: 0
   m_Name: Left
-  m_TagString: Wall
+  m_TagString: left_wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -777,8 +822,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2141605451574452729, guid: 6063a804922608b4c8035e4c7df70ac9, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3482801694701303935, guid: 6063a804922608b4c8035e4c7df70ac9, type: 3}
       propertyPath: m_Name
+      value: spaceship
+      objectReference: {fileID: 0}
+    - target: {fileID: 3482801694701303935, guid: 6063a804922608b4c8035e4c7df70ac9, type: 3}
+      propertyPath: m_TagString
       value: spaceship
       objectReference: {fileID: 0}
     - target: {fileID: 8421997662359971289, guid: 6063a804922608b4c8035e4c7df70ac9, type: 3}
