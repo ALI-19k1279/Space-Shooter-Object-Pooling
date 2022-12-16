@@ -21,7 +21,8 @@ public class bullet : MonoBehaviour
         //destroy bullet when hits the wall
         if (collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("rock"))
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 }

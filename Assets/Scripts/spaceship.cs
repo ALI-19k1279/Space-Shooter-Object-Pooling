@@ -31,8 +31,19 @@ public class spaceship : MonoBehaviour
     private void Fire()
     {
         //create bullet
+         //create bullet
         Vector3 bulletPosition = new Vector3(transform.position.x + 1, transform.position.y, -1);
-        Instantiate(bulletPrefab, bulletPosition, Quaternion.Euler(0, 0, -90));
+
+        //Instantiate(bulletPrefab, bulletPosition, Quaternion.Euler(0, 0, -90));
+
+        //Get a bullet from the Pool
+        GameObject bullet = ObjectPool.instance.GetPooledObject();
+        if (bullet != null)
+        {
+            bullet.transform.position = bulletPosition;
+            bullet.transform.rotation = Quaternion.Euler(0, 0, -90);
+            bullet.SetActive(true);
+        }
     }
 
     private void FixedUpdate()
