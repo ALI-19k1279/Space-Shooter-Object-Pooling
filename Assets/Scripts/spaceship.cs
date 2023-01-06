@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class spaceship : MonoBehaviour
 {
+    public GameOverScreen gameOverScreen;
+    // public rock rock;
     //for moving
     private float vertical;
     [SerializeField]
@@ -53,10 +55,14 @@ public class spaceship : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //destroy bullet when hits the wall
+        //destroy bullet when hits the rock
         if (collision.gameObject.CompareTag("rock"))
         {
             Destroy(gameObject);
+            GameOver();
         }
+    }
+    public void GameOver(){
+        gameOverScreen.Setup();
     }
 }

@@ -5,7 +5,8 @@ using UnityEngine;
 public class rock : MonoBehaviour
 {
     float speed = 4f;
-
+     
+    // public static int score=0;
     [SerializeField]
     Rigidbody2D rb;
 
@@ -26,6 +27,7 @@ public class rock : MonoBehaviour
             if (current_health == health)
             {
                 Destroy(gameObject);
+                ScoreCalculator.score+=1;
             }
             else
             {
